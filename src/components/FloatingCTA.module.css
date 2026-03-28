@@ -1,0 +1,32 @@
+.floatingBtn {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  background-color: var(--primary-brand);
+  color: #000;
+  padding: 0.85rem 1.75rem;
+  border-radius: 100px;
+  font-weight: 700;
+  font-size: 1.125rem;
+  box-shadow: 0 8px 32px rgba(202, 138, 4, 0.4);
+  transition: box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.floatingBtn:hover {
+  box-shadow: 0 12px 40px rgba(202, 138, 4, 0.6);
+  color: #000;
+}
+
+@media (max-width: 768px) {
+  .floatingBtn {
+    bottom: 1.5rem;
+    right: 1.5rem;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+  }
+}

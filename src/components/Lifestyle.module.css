@@ -1,0 +1,148 @@
+.section {
+  position: relative;
+  background-color: #050505;
+  overflow: hidden;
+}
+
+.grid {
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  padding: 5rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 10;
+}
+
+.textContent {
+  max-width: 500px;
+}
+
+.tag {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  color: var(--primary-brand);
+  margin-bottom: 1.5rem;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 400;
+  margin-bottom: 1.5rem;
+  line-height: 1.1;
+  color: #FAFAF9;
+}
+
+.divider {
+  width: 40px;
+  height: 2px;
+  background-color: var(--primary-brand);
+  margin-bottom: 2rem;
+}
+
+.description {
+  font-size: 1.125rem;
+  color: #c2c2c2;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+  font-weight: 300;
+}
+
+.ctaButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: transparent;
+  color: #FAFAF9;
+  padding: 1rem 0;
+  font-weight: 500;
+  transition: var(--transition-smooth);
+  margin-top: 1.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.ctaButton:hover {
+  color: var(--primary-brand);
+  border-bottom-color: var(--primary-brand);
+  gap: 1rem;
+}
+
+.ctaIcon {
+  transition: var(--transition-smooth);
+}
+
+.imageBlock {
+  position: relative;
+  min-height: 500px;
+  width: 100%;
+}
+
+.imageWrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.image {
+  object-fit: cover;
+  object-position: center;
+  filter: brightness(0.85);
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 30%;
+  background: linear-gradient(to top, rgba(5,5,5,1) 0%, transparent 100%);
+  pointer-events: none;
+}
+
+@media (min-width: 768px) {
+  .section {
+    padding: 2rem 0;
+  }
+  
+  .grid {
+    flex-direction: row;
+    max-width: 1400px;
+    margin: 0 auto;
+    align-items: center;
+  }
+  
+  .content, .imageBlock {
+    flex: 1;
+  }
+  
+  .content {
+    padding: 6rem 4rem;
+  }
+  
+  .title {
+    font-size: 3.5rem;
+  }
+
+  .imageBlock {
+    min-height: 700px;
+    border-radius: 20px 0 0 20px;
+    overflow: hidden;
+    box-shadow: -10px 0 40px rgba(0,0,0,0.5);
+  }
+
+  .overlay {
+    background: linear-gradient(to right, rgba(5,5,5,1) 0%, transparent 40%);
+    height: 100%;
+    width: 30%;
+    top: 0;
+    left: 0;
+  }
+}

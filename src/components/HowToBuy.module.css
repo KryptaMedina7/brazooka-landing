@@ -1,0 +1,149 @@
+.section {
+  position: relative;
+  background-color: transparent;
+  padding: 8rem 0;
+}
+
+.header {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto 5rem auto;
+}
+
+.eyebrow {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  color: var(--primary-brand);
+  margin-bottom: 1rem;
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: 400;
+  margin-bottom: 1.5rem;
+}
+
+.subtitle {
+  color: #A3A3A3;
+  font-size: 1.125rem;
+  line-height: 1.6;
+  font-weight: 300;
+}
+
+.stepsLayout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  margin-bottom: 5rem;
+}
+
+.stepCard {
+  position: relative;
+  border-left: 1px solid rgba(255, 255, 255, 0.1);
+  padding-left: 1.5rem;
+}
+
+.stepNumber {
+  font-family: var(--font-heading);
+  font-size: 3.5rem;
+  font-weight: 400;
+  color: rgba(202, 138, 4, 0.3);
+  line-height: 1;
+  margin-bottom: 1.5rem;
+}
+
+.stepTitle {
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  margin-bottom: 0.75rem;
+  letter-spacing: -0.01em;
+}
+
+.stepDesc {
+  color: #A3A3A3;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.ctaBanner {
+  display: flex;
+  flex-direction: column;
+  padding: 3rem 2rem;
+  text-align: center;
+  gap: 2.5rem;
+  background: linear-gradient(135deg, rgba(202, 138, 4, 0.05) 0%, rgba(10, 10, 10, 0.8) 100%);
+  border-color: rgba(202, 138, 4, 0.2);
+}
+
+.bannerContent h3 {
+  font-size: 2rem;
+  font-weight: 400;
+  margin-bottom: 1rem;
+  letter-spacing: -0.02em;
+}
+
+.bannerContent p {
+  color: #A3A3A3;
+  font-size: 1.125rem;
+  line-height: 1.6;
+  font-weight: 300;
+}
+
+.bannerActions {
+  display: flex;
+  justify-content: center;
+}
+
+.primaryBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: var(--primary-brand);
+  color: #0A0A0A;
+  padding: 1rem 2.5rem;
+  border-radius: 100px;
+  font-weight: 500;
+  font-size: 1rem;
+  box-shadow: 0 4px 20px rgba(202, 138, 4, 0.2);
+  transition: var(--transition-smooth);
+}
+
+.primaryBtn:hover {
+  background: var(--primary-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 25px rgba(202, 138, 4, 0.4);
+}
+
+@media (min-width: 640px) {
+  .stepsLayout {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .stepsLayout {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+  }
+  
+  .stepCard {
+    border-left: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-left: 0;
+    padding-top: 2rem;
+  }
+
+  .ctaBanner {
+    flex-direction: row;
+    align-items: center;
+    text-align: left;
+    padding: 4rem 5rem;
+  }
+
+  .bannerContent {
+    flex: 1;
+  }
+}
