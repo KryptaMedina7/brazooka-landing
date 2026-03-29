@@ -32,15 +32,26 @@ export default function InstagramSection() {
 
   const scrollLeft = () => {
     if (scrollRef.current) {
-      const cardWidth = scrollRef.current.children[0]?.clientWidth || 350;
-      scrollRef.current.scrollBy({ left: -(cardWidth + 24), behavior: 'smooth' });
+      if (scrollRef.current.scrollLeft <= 10) {
+        scrollRef.current.scrollTo({ left: scrollRef.current.scrollWidth, behavior: 'smooth' });
+      } else {
+        const cardWidth = scrollRef.current.children[0]?.clientWidth || 350;
+        scrollRef.current.scrollBy({ left: -(cardWidth + 24), behavior: 'smooth' });
+      }
     }
   };
 
   const scrollRight = () => {
     if (scrollRef.current) {
-      const cardWidth = scrollRef.current.children[0]?.clientWidth || 350;
-      scrollRef.current.scrollBy({ left: cardWidth + 24, behavior: 'smooth' });
+      const { scrollLeft, scrollWidth, clientWidth } = scrollRef.current;
+      const maxScroll = scrollWidth - clientWidth;
+
+      if (scrollLeft >= maxScroll - 10) {
+        scrollRef.current.scrollTo({ left: 0, behavior: 'smooth' });
+      } else {
+        const cardWidth = scrollRef.current.children[0]?.clientWidth || 350;
+        scrollRef.current.scrollBy({ left: cardWidth + 24, behavior: 'smooth' });
+      }
     }
   };
 

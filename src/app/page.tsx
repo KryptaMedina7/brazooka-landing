@@ -4,6 +4,9 @@ import ValueProps from '@/components/ValueProps';
 import AboutBrand from '@/components/AboutBrand';
 
 // Lazy-load heavier sections that live below the fold
+const ProductSliderSection = dynamic(() => import('@/components/ProductSliderSection'), {
+  loading: () => <div style={{ minHeight: '50vh' }} />,
+});
 const Lifestyle = dynamic(() => import('@/components/Lifestyle'), {
   loading: () => <div style={{ minHeight: '60vh' }} />,
 });
@@ -23,6 +26,7 @@ export default function Home() {
       <Hero />
       <ValueProps />
       <AboutBrand />
+      <ProductSliderSection />
       <Lifestyle />
       <HowToBuy />
       <FAQ />

@@ -76,9 +76,6 @@ export default function Footer() {
 
           <div className={styles.linksCol}>
             <h4 className={styles.linksTitle}>Atención Comercial</h4>
-            <span className={styles.staticLink}>Lunes a Sábado</span>
-            <span className={styles.staticLink}>10:00 - 19:00 hrs</span>
-            <div className={styles.break}></div>
             <span className={styles.staticLink}>Despachos diarios</span>
             <span className={styles.staticLink}>Venta B2C / B2B</span>
           </div>
