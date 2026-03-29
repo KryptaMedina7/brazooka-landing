@@ -16,10 +16,8 @@ export default function ProductSliderSection() {
   const [selectedProduct, setSelectedProduct] = useState<any>(null);
   const scrollRef = useRef<HTMLDivElement>(null);
 
-  // Consider as highlighted all vaporizers and accessories to have a rich carousel
-  const carouselProducts = CATALOG_PRODUCTS.filter(
-    p => p.category === 'Vaporizadores' || p.category === 'Accesorios'
-  ).slice(0, 8); // Let's take up to 8 items to not make it too long
+  // Seleccionamos un mix de productos (vapos y backwoods) limitados a 7 items
+  const carouselProducts = CATALOG_PRODUCTS.slice(0, 7);
 
   // Optional: Auto-scroll logic if desired, similar to Instagram:
   useEffect(() => {
