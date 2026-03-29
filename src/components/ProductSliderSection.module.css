@@ -23,7 +23,7 @@
 }
 
 .title {
-  font-size: 3rem;
+  font-size: 2.25rem;
   font-weight: 400;
   margin-bottom: 1.5rem;
   color: #FAFAF9;
@@ -107,6 +107,12 @@
 @media (min-width: 1024px) {
   .productCard {
     flex: 0 0 calc(33.333% - 1rem); /* 3 cards visible on desktop */
+  }
+}
+
+@media (min-width: 768px) {
+  .title {
+    font-size: 3rem;
   }
 }
 
